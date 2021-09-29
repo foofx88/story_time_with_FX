@@ -15,7 +15,8 @@
 Upon exploring the datasets, there are a lot of texts. Despite having 3269 records in the <a href="https://github.com/foofx88/story_time_with_FX/blob/main/datasets/children_books.csv">children books dataset</a>, there are only 39 unique books after removing duplicates and null values. This will then be used for test data for the text classification model.</p>
 <img src="https://github.com/foofx88/story_time_with_FX/blob/main/images/duplicated_title.PNG" width="80%">
 
-<p>Moving on to the <a href="https://github.com/foofx88/story_time_with_FX/blob/main/datasets/children_stories.csv">children stories dataset</a>, there are 393 unique books out of 430 after cleaning the data. I have identified that there are a few duplicated story names with different description but there are a number of duplicated descriptions with different categories ("cats" column). The "cats" column was also in a mess, with more than 59 unique values. <img src="https://github.com/foofx88/story_time_with_FX/blob/main/images/unique_cats.PNG" width="80%"> <br>
+<p>Moving on to the <a href="https://github.com/foofx88/story_time_with_FX/blob/main/datasets/children_stories.csv">children stories dataset</a>, there are 393 unique books out of 430 after cleaning the data. I have identified that there are a few duplicated story names with different description but there are a number of duplicated descriptions with different categories ("cats" column). The "cats" column was also in a mess, with more than 59 unique values. <br>
+  <img src="https://github.com/foofx88/story_time_with_FX/blob/main/images/unique_cats.PNG" width="80%"> <br>
 As there are some age gaps in between, I will take account of the start age and reference to this <a href="https://www.healthychildren.org/English/ages-stages/Pages/default.aspx">guide</a>. <br> 
 My Stages column would look like: 
 <ul>
