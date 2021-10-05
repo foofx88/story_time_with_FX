@@ -24,17 +24,22 @@ My Stages column would look like:
   <li>Preschool: 3-5 years</li> 
   <li>Gradeschooler: 5-12 years</li> 
   <li>Teen: 12-18 years</li></ul> </p>
-<p>I then proceed to drop off duplicated stories with the same description, renaming the columns, resulting to only 393 records after the clean up. Next, I wanted to create a Word Cloud from the most frequently used words in the stories descriptions. After exploring the data, I proceed to remove unneccesary stopwords and created the Word Cloud with a Mask Image.
+<p>I then proceed to drop off duplicated stories with the same description, renaming the columns, resulting to only 393 records after the clean up. Next, I wanted to create a Word Cloud from the most frequently used words in the stories descriptions. After exploring the data, I proceed to remove unneccesary stopwords and created the Word Cloud with a Mask Image. <br>
 <img src="https://github.com/foofx88/story_time_with_FX/blob/main/images/stories_wc.png" width="80%"></p>
 
 <p>Now to build the charts using cutecharts library. By combining all the description from the stories, removing unwanted symbols and stopwords using NLTK.corpus stopwords. I was able to get a list of frequently used words in stories description. As I want to repeat the process with each individual Stage, I've created a function to clean up stopwords.</p>
 <img src="https://github.com/foofx88/story_time_with_FX/blob/main/images/function_swcleaning.PNG"></p>
-<p>Once that was completed, I perform the following to get the cutechart's bar chart plotted. One interesting thing was that as the chart is interactive, when it is saved, it is saved as a HTML file, enabling it to be embedded in a HTML file easily.
+<p>Once that was completed, I perform the following to get the cutechart's bar chart plotted. One interesting thing was that as the chart is interactive, when it is saved, it is saved as a HTML file, enabling it to be embedded in a HTML file easily. <br>
 <img src="https://github.com/foofx88/story_time_with_FX/blob/main/images/render_bar.PNG" width="80%">
 </p>
-<p>The same was performed for the Pie, Line, and Web chart with minor tweaks for the legend</p>
+<p>The same was performed for the Pie, Line, and Web chart with minor tweaks for the legend.</p>
 
-Explore the charts <a href="https://foofx88.github.io/story_time_with_FX/">Here</a>
+Explore the charts <a href="https://foofx88.github.io/story_time_with_FX/">Here</a> <br>
+
+
+<h3>Stage Prediction with Stories Description</h3> <hr>
+<p>I proceed to prepare the datasets for Machine Learning, to predict the Stage for each stories using the description of the stories.
+For text classification, I want to tokenize each word and again get rid of unwanted symbols and stopwords. Once that's done, I've lemmatize each word by importing WordNetLemmatizer from nltk.stem.wordnet. I then re-run the stopwords removal as most words are now lemmatized and some may not be needed for X. After that, I used LabelEncoder from sklearn.preprocessing to encode "Stage" preparing it for y.</p>
 
 
 
